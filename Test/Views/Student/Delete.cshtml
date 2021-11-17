@@ -1,0 +1,51 @@
+﻿@model Test.Models.Student
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h3>Want to Delete?</h3>
+<div class="container p-3 my-3 border">
+    
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.ClassName)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.ClassName)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.RollNo)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.RollNo)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Percentage)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Percentage)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete_Data">
+        <input type="hidden" asp-for="Id" />
+        <input class="btn btn-primary" type="submit" value="Yes" />
+        <a class="btn btn-danger" asp-action="Index">No</a>
+    </form>
+
+</div>
